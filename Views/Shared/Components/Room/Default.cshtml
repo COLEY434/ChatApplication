@@ -1,0 +1,15 @@
+﻿@model List<Chat>
+
+<div class="side-menu">
+    @foreach (var chat in Model)
+    {
+        <a href="/Chat/@chat.Id" class="room-button">
+            @chat.Name
+        </a>
+    }
+
+    <a href="#" class="room-button" id="create-room-btn">
+        <strong>+</strong>
+    </a>
+</div>
+@*asp-controller="Home" asp-action="Chat" asp-route-id="@chat.Id"*@
